@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Planet: Mars</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Mars - The Red Planet</h1>
+        <nav>
+            <ul>
+                <li><a href="#general">General Information</a></li>
+                <li><a href="#gallery">Image Gallery</a></li>
+                <li><a href="#data">Scientific Data</a></li>
+                <li><a href="#video">NASA Video</a></li>
+                <li><a href="#contact">Questions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="general" class="cosmic-section">
+            <h2>General Information</h2>
+            <p><strong>Mars</strong> is the fourth planet from the Sun and the second smallest planet in the Solar System, with a diameter about half that of Earth. It is often called the "Red Planet" due to the prevalent iron oxide on its surface, which gives it a distinctive reddish hue.</p>
+            <p>Mars's atmosphere is thin, composed mainly of carbon dioxide (95%), nitrogen (2.7%), and argon (1.6%). The average surface temperature is about -63°C, varying significantly between day and night and between the equator and the poles. The Martian surface is marked by impact craters, massive volcanoes, valleys, and polar ice caps made of water ice and carbon dioxide.</p>
+            <p>Recent research has focused on searching for signs of life on Mars, particularly by studying the presence of water. Although current conditions are not conducive to life as we know it, it is believed that Mars once had a warmer and wetter environment, with oceans and rivers.</p>
+        </section>
+
+        <section id="gallery" class="cosmic-section">
+            <h2>Image Gallery</h2>
+            <div class="image-gallery">
+                <a href="https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg" data-lity><img src="https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg" alt="Mars as seen from space"></a>
+                <a href="rover.jpg" alt="The Curiosity rover on Mars"><img src="images/rover.jpg" alt="Rover"></a>
+                <a href="valles-marineris-nasajplarizona-state-universityscience-photo-library.jpg" data-lity><img src="images/valles-marineris-nasajplarizona-state-universityscience-photo-library.jpg" alt="Valles Marineris on Mars"></a>
+                <a href="Olympus_Mons_3.webp" data-lity><img src="images/Olympus_Mons_3.webp" alt="Olympus Mons on Mars"></a>
+            </div>
+        </section>
+
+        <section id="data" class="cosmic-section"> 
+            <h2>Table of Scientific Data</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Characteristic</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Average distance from the Sun</td>
+                        <td>227.9 million km</td>
+                    </tr>
+                    <tr>
+                        <td>Orbital period (Martian year)</td>
+                        <td>687 Earth days</td>
+                    </tr>
+                    <tr>
+                        <td>Rotation period (Martian day)</td>
+                        <td>24 hours, 37 minutes</td>
+                    </tr>
+                    <tr>
+                        <td>Diameter</td>
+                        <td>6,779 km</td>
+                    </tr>
+                    <tr>
+                        <td>Mass</td>
+                        <td>0.64171 x 10^24 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Number of natural satellites</td>
+                        <td>2 (Phobos, Deimos)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="video" class="cosmic-section">
+            <h2>NASA Video</h2>
+            <div class="video-container">
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/GUqsH5y1j1M?si=Qm1ICTrnH2VNzDYP" title="YouTube video player" frameborder="0" 
+               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+               allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="contact" class="cosmic-section">
+            <h2>Do you have questions about Mars?</h2>
+            <p>Fill out the form below and we will try to answer your curiosities.</p>
+            <form id="contactForm" action="https://formspree.io/f/xqalokdd" method="POST">
+                <div class="form-group">
+                    <label for="nume">Name:</label>
+                    <input type="text" id="nume" name="nume" required pattern="[A-Za-z\s]+" title="The name must contain only letters and spaces.">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="intrebare">Your question:</label>
+                    <textarea id="intrebare" name="intrebare" rows="5" required minlength="10" maxlength="500"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="acord" name="acord" required>
+                    <label for="acord">I agree to the processing of my data to receive a response.</label>
+                </div>
+                <button type="submit">Send</button>
+                <p id="formMessage" class="hidden"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Favorite Planet - Mars. All rights reserved.</p>
+        <p>
+        <a class="footer" href="https://www.nasa.gov/">NASA Official Site</a>
+        </p>
+        <p class="footer">
+      <a href="Sun.html" >Visit the Website Dedicated to the Sun</a></p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const form = event.target;
+            const messageElement = document.getElementById('formMessage');
+
+           
+            if (!form.checkValidity()) {
+                messageElement.textContent = 'Please fill in all fields correctly.';
+                messageElement.className = 'error';
+                return;
+            }
+
+           
+            setTimeout(() => {
+                messageElement.textContent = 'Thank you! Your question has been sent.';
+                messageElement.className = 'success';
+                form.reset(); 
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
